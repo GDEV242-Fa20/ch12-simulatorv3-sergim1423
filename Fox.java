@@ -84,15 +84,12 @@ public class Fox extends Animal
         }
     }
 
-    /**
-     * Increase the age. This could result in the fox's death.
+     /**
+     * returns maximum age
      */
-    private void incrementAge()
+    protected int getMaxAge()
     {
-        age++;
-        if(age > MAX_AGE) {
-            setDead();
-        }
+        return MAX_AGE;
     }
     
     /**
@@ -164,11 +161,8 @@ public class Fox extends Animal
         return births;
     }
 
-    /**
-     * A fox can breed if it has reached the breeding age.
-     */
-    private boolean canBreed()
-    {
-        return age >= BREEDING_AGE;
+    protected int getBreedingAge()
+   {
+       return BREEDING_AGE;
     }
 }

@@ -88,6 +88,33 @@ public abstract class Animal
         this.age=age;
     }
     
+     /**
+     * A rabbit can breed if it has reached the breeding age.
+     * @return true if the rabbit can breed, false otherwise.
+     */
+    protected boolean canBreed()
+    {
+        return getAge() >= getBreedingAge();
+    }
+    /*
+     * return the breeding
+     */
+    abstract protected int getBreedingAge();
+    abstract protected int getMaxAge();
+    
+    /**
+     * Increases the age of the animal. Increase in age can cause 
+     * death.
+     */
+    protected void incrementAge()
+    {
+        age++;
+        if(age>getMaxAge())
+        {
+            setDead();
+        }
+    }
+    
     /**
      * Place the animal at the new location in the given field.
      * @param newLocation The animal's new location.
