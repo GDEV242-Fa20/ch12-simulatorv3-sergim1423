@@ -71,6 +71,24 @@ public abstract class Animal
     }
     
     /**
+     * return animals age
+     * @return animals age.
+     */
+    public int getAge()
+    {
+        return age;
+    }
+    
+    /**
+     * set animimals age
+     * @param age The animals age
+     */
+    public void setAge(int age)
+    {
+        this.age=age;
+    }
+    
+    /**
      * Place the animal at the new location in the given field.
      * @param newLocation The animal's new location.
      */
